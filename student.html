@@ -36,6 +36,7 @@
     "최대건":"뼈많은생선",
     "한유진":"양파",
     "허진":"딸기",
+    "박박박" : "버섯"
   };
 
   let hateMushroom = 0;
@@ -47,23 +48,22 @@
   let MushroomHater = ["김동주", "김형진", "정지은"];
   
   let root = document.getElementById('root');
-  const food = Object.values(studentObject);
+  // const food = Object.values(studentObject);
   
 
-  for (let finder in studentObject) {
-    console.log("이름 :", finder)
-    console.log("음식 :", studentObject[finder])
-    if (studentObject[finder] === "버섯") {
-      const haters = studentObject[finder] === "버섯";
+  for (let key in studentObject) {
+    console.log("이름 :", key)
+    console.log("음식 :", studentObject[key])
+    if (studentObject[key] === "버섯") {
       const createHaters = document.createElement("div");
-      createHaters.innerText = haters;
+      createHaters.innerText = key;
       root.appendChild(createHaters);
-      console.error('찾음'); 
+      console.error('찾음');
     }
   }
+// key를 핸들링하기에 
 
-
-
+// array method
 
   
 
