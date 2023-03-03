@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+  let studentObject = {
+    "강지민":"마라탕",
+    "곽윤호":"조개",
+    "권예준":"가지",
+    "김동주":"버섯",
+    "김은아":"굴",
+    "김종윤":"오이",
+    "김지섭":"술",
+    "김형진":"버섯",
+    "노수민":"다리많은거",
+    "류은이":"피망",
+    "박달재":"벌레",
+    "박수연":"삼결살",
+    "박준형":"생간",
+    "성해경":"우엉",
+    "이경택":"홍어",
+    "이세민":"짜장면",
+    "이재권":"가지",
+    "임지성":"단무지",
+    "장루빈":"김치",
+    "정성철":"고수",
+    "정지은":"버섯",
+    "정희은":"술",
+    "최대건":"뼈많은생선",
+    "한유진":"양파",
+    "허진":"딸기",
+  };
+
+  let hateMushroom = 0;
+  //반복문을 돌려서 몇 명이 버섯을 싫어하는지 카운팅할 수 있나?
+  // hateMushroomHuman[0] = "김동주"
+  // hateMushroomHuman[1] = "김형진"
+  // hateMushroomHuman[2] = "정지은"
+  
+  let MushroomHater = ["김동주", "김형진", "정지은"];
+  
+  let root = document.getElementById('root');
+  const food = Object.values(studentObject);
+  
+
+  for (let finder in studentObject) {
+    console.log("이름 :", finder)
+    console.log("음식 :", studentObject[finder])
+    if (studentObject[finder] === "버섯") {
+      const haters = studentObject[finder] === "버섯";
+      const createHaters = document.createElement("div");
+      createHaters.innerText = haters;
+      root.appendChild(createHaters);
+      console.error('찾음'); 
+    }
+  }
+
+
+
+
+  
+
+  </script>
+</body>
+</html>
