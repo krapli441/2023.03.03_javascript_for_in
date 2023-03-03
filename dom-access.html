@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <p id="tag"></p>
+
+  <script>
+    const root = document.getElementById('root');
+    const pTag = document.getElementById('tag');
+
+    for (let junBrother in root.style) {
+      console.log(junBrother);
+      if (junBrother === "width") {
+        junBrother === "100px";
+      } else if (junBrother === "height"){
+        junBrother === "100px";
+      }
+        else if (junBrother === "border") {
+          junBrother === "1px solid black";
+        }
+      else {
+        console.error("없다");
+      }
+    }
+
+    // for (let ptype in pTag.style) {
+    //   console.log(ptype);
+    // } if (ptype === "color") {
+    //   ptype === "48px";
+    // }
+  </script>
+</body>
+</html>
